@@ -3,21 +3,112 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login to WiFi</title>
+        <title>Login to Wi-Fi</title>
+        <link rel="icon" href="/favicon.png" type="image/x-icon" />
+        <style>
+            input[type='submit']:hover {
+                background-color: #57068c;
+                color: #fff;
+            }
+
+            input[type='submit'] {
+                background-color: #fff;
+                color: #57068c;
+                transition: background-color 0.3s, color 0.3s;
+            }
+        </style>
     </head>
-    <body>
-        <form action="/login" method="post" class="form-example">
-            <div class="form-example">
-                <label for="username">Enter your username: </label>
-                <input type="text" name="username" id="username" required />
-            </div>
-            <div class="form-example">
-                <label for="password">Enter your password: </label>
-                <input type="password" name="password" id="password" required />
-            </div>
-            <div class="form-example">
-                <input type="submit" value="Log in!" />
-            </div>
-        </form>
+    <body
+        style="
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #330662;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        "
+    >
+        <div
+            style="
+                width: 100%;
+                display: block;
+                text-align: left;
+                max-width: 540px;
+                margin-top: 80px;
+                padding: 30px;
+                background-color: #fff;
+            "
+        >
+            <img
+                src="/NYU-Logo.png"
+                alt="NYU Logo"
+                style="width: 100px; height: auto"
+            />
+            <h1 style="color: #3d4d5d; font-size: x-large">
+                CS4CS Free Wi-Fi Login
+            </h1>
+            <p style="color: #3d4d5d">
+                Please log in to access the Wi-Fi network.<br />(THIS IS FAKE,
+                DO NOT ENTER YOUR REAL CREDENTIALS!)
+            </p>
+            <form action="/login" method="post" class="form-example">
+                <div class="form-example">
+                    <label
+                        for="username"
+                        style="font-size: 15px; color: #213243"
+                        >NetID (e.g., aqe123)</label
+                    >
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        style="
+                            height: 40px;
+                            width: 100%;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                            border: 1px solid #e2e1dd;
+                        "
+                        required
+                    />
+                </div>
+                <div class="form-example">
+                    <label
+                        for="password"
+                        style="font-size: 15px; color: #213243"
+                        >Password</label
+                    >
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        style="
+                            height: 40px;
+                            width: 100%;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                            border: 1px solid #e2e1dd;
+                        "
+                        required
+                    />
+                </div>
+                <div class="form-example">
+                    <input
+                        type="submit"
+                        value="Login"
+                        style="
+                            height: 40px;
+                            width: 80px;
+                            margin-top: 40px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            border: solid 1px #57068c;
+                            cursor: pointer;
+                        "
+                    />
+                </div>
+            </form>
+        </div>
     </body>
 </html>
