@@ -5,110 +5,154 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Login to Wi-Fi</title>
         <link rel="icon" href="./favicon.png" type="image/x-icon" />
-        <style>
-            input[type='submit']:hover {
-                background-color: #57068c;
-                color: #fff;
-            }
-
-            input[type='submit'] {
-                background-color: #fff;
-                color: #57068c;
-                transition: background-color 0.3s, color 0.3s;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="./bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="./custom-common.css" />
+        <link rel="stylesheet" type="text/css" href="./new-login.css" />
     </head>
-    <body
-        style="
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #330662;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        "
-    >
-        <div
-            style="
-                width: 100%;
-                display: block;
-                text-align: left;
-                max-width: 540px;
-                margin-top: 80px;
-                padding: 30px;
-                background-color: #fff;
-            "
-        >
-            <img
-                src="./NYU-Logo.png"
-                alt="NYU Logo"
-                style="width: 100px; height: auto"
-            />
-            <h1 style="color: #3d4d5d; font-size: x-large">
-                CS4CS Free Wi-Fi Login
-            </h1>
-            <p style="color: #3d4d5d">
-                Please log in to access the Wi-Fi network.<br />(THIS IS FAKE,
-                DO NOT ENTER YOUR REAL CREDENTIALS!)
-            </p>
-            <form action="/login" method="post" class="form-example">
-                <div class="form-example">
-                    <label
-                        for="username"
-                        style="font-size: 15px; color: #213243"
-                        >NetID (e.g., aqe123)</label
-                    >
-                    <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        style="
-                            height: 40px;
-                            width: 100%;
-                            margin-top: 10px;
-                            margin-bottom: 20px;
-                            border: 1px solid #e2e1dd;
-                        "
-                        required
-                    />
-                </div>
-                <div class="form-example">
-                    <label
-                        for="password"
-                        style="font-size: 15px; color: #213243"
-                        >Password</label
-                    >
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        style="
-                            height: 40px;
-                            width: 100%;
-                            margin-top: 10px;
-                            margin-bottom: 20px;
-                            border: 1px solid #e2e1dd;
-                        "
-                        required
-                    />
-                </div>
-                <div class="form-example">
-                    <input
-                        type="submit"
-                        value="Login"
-                        style="
-                            height: 40px;
-                            width: 80px;
-                            margin-top: 40px;
-                            font-size: 14px;
-                            font-weight: bold;
-                            border: solid 1px #57068c;
-                            cursor: pointer;
-                        "
-                    />
-                </div>
-            </form>
+    <body style="display: grid; min-height: 0%">
+        <div class="nyu-message">
+            <div class="wrap">
+                <p>
+                    <a href="" class="message"></a>
+                </p>
+                <a href="" class="nyu-message-more right uppercase rounded"
+                    >More</a
+                >
+            </div>
         </div>
+
+        <!-- page Content-->
+        <div class="container-fluid body-wrapper" style="margin-top: 5%">
+            <div class="row">
+                <div
+                    class="col-md-12"
+                    style="padding-right: 0px; padding-left: 0px"
+                >
+                    <!-- content -->
+                    <div
+                        class="container col-xs-10 col-sm-6 col-md-6 col-lg-4 col-centered wr-content wr-login"
+                    >
+                        <div class="titleDiv">
+                            <div>
+                                <img
+                                    src="./NYU-Logo.png"
+                                    class="nyuLogo"
+                                    alt="New York University"
+                                />
+                            </div>
+                            <div>
+                                <h1
+                                    class="wr-title blue-bg padding-double white boarder-bottom-blue margin-none"
+                                >
+                                    Log In to Your NYU Account
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="boarder-all">
+                            <div class="clearfix"></div>
+                            <div class="padding-double login-form">
+                                <form
+                                    action="/login"
+                                    method="post"
+                                    name="login"
+                                    id="loginForm"
+                                >
+                                    <div class="innercontent">
+                                        <div class="form-content">
+                                            <div
+                                                style="margin-bottom: 15px"
+                                            ></div>
+                                            <div
+                                                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group"
+                                            >
+                                                <label for="username"
+                                                    >NetID (e.g., aqe123)</label
+                                                >
+                                                <input
+                                                    id="username"
+                                                    name="username"
+                                                    type="text"
+                                                    class="form-control"
+                                                    tabindex="0"
+                                                    placeholder=""
+                                                    required
+                                                    autofocus
+                                                />
+                                            </div>
+
+                                            <div
+                                                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group"
+                                            >
+                                                <label for="password"
+                                                    >Password</label
+                                                >
+                                                <input
+                                                    id="password"
+                                                    name="password"
+                                                    type="password"
+                                                    class="form-control"
+                                                    placeholder=""
+                                                    autocomplete="off"
+                                                />
+                                            </div>
+                                            <div
+                                                style="
+                                                    width: 278px;
+                                                    font-size: 14px;
+                                                    margin-bottom: 15px;
+                                                "
+                                                class="instruction"
+                                            >
+                                                <p>
+                                                    <i
+                                                        >By logging in, you
+                                                        agree to abide by the
+                                                        <a
+                                                            href="/"
+                                                            target="_blank"
+                                                            >Policy on
+                                                            Responsible Use of
+                                                            NYU Computers and
+                                                            Data</a
+                                                        >.</i
+                                                    >
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group"
+                                            >
+                                                <div>
+                                                    <button
+                                                        class="wr-btn grey-bg col-xs-12 col-md-12 col-lg-12 font-extra-large margin-bottom-double"
+                                                        type="submit"
+                                                        name="_eventId_proceed"
+                                                    >
+                                                        Login
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="instruction">
+                                            <p>
+                                                Be cybersecurity aware:
+                                                <a href="/" target="_blank"
+                                                    >Learn how to confirm that
+                                                    this is the legitimate NYU
+                                                    Login page.</a
+                                                >
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </form>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /content -->
+            </div>
+        </div>
+        <!-- End of Page Content -->
     </body>
 </html>

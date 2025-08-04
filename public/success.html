@@ -9,36 +9,68 @@
             href="/idp/profile/SAML2/Redirect/SSO/favicon.png"
             type="image/x-icon"
         />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/idp/profile/SAML2/Redirect/SSO/bootstrap.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/idp/profile/SAML2/Redirect/SSO/custom-common.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/idp/profile/SAML2/Redirect/SSO/new-login.css"
+        />
     </head>
-    <body
-        style="
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #330662;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        "
-    >
-        <div
-            style="
-                width: 100%;
-                display: block;
-                text-align: left;
-                max-width: 540px;
-                margin-top: 80px;
-                padding: 30px;
-                background-color: #fff;
-            "
-        >
-            <img
-                src="/idp/profile/SAML2/Redirect/SSO/NYU-Logo.png"
-                alt="NYU Logo"
-                style="width: 100px; height: auto"
-            />
-            <h1 style="color: #3d4d5d; font-size: x-large">Success!</h1>
-            <p style="color: #3d4d5d">You can now access the Wi-Fi network.</p>
+    <body style="display: grid; min-height: 0%;">
+        <div class="nyu-message">
+            <div class="wrap">
+                <p>
+                <a href="" class="message"></a>
+                </p>
+                <a href="" class="nyu-message-more right uppercase rounded">More</a>
+            </div>
         </div>
-    </body>
+
+        <!-- page Content-->
+        <div class="container-fluid body-wrapper" style="margin-top: 5%;">
+            <div class="row">
+                <div class="col-md-12" style="padding-right:0px;padding-left:0px;">
+                    <!-- content -->
+                    <div class="container col-xs-10 col-sm-6 col-md-6 col-lg-4 col-centered wr-content wr-login">
+                        <div class="titleDiv">
+                            <div>
+                            <img src="/idp/profile/SAML2/Redirect/SSO/NYU-Logo.png" class="nyuLogo" alt="New York University"/>
+                            </div>
+                            <div>
+                                <h1 class="wr-title blue-bg padding-double white margin-none">
+                                    Success!
+                                </h1>
+                                <p style="padding-bottom: 40px">You can now access the Wi-Fi network.</p>
+                            </div>
+                        </div>
+                        <div class="boarder-all">
+                            <div class="clearfix"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="needHelp">
+                            <div class="pwmLinks">
+                                <div><a href="/" target="_blank">Reset Password</a></div>
+                                <div><a href="/" target="_blank">Forgot NetID</a></div>
+                                <div><a href="/" target="_blank">Activate NetID</a></div>
+                                <div><a href="/" target="_blank">Accessibility</a></div>
+                            </div>
+                            <p>To securely log out of your NYU account, quit your browser, especially when using a shared computer.</p>
+                            <p><b>Need help?</b> Contact the <a href="/" target="_blank">NYU IT Service Desk</a>, open 24x7 for support by email or phone.</p>
+                    </div>
+                </div>
+                <!-- /content -->
+                </div>
+            </div>
+        <!-- End of Page Content -->
+ 	</body>
+</html>
 </html>
