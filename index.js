@@ -11,7 +11,7 @@ let data = JSON.parse(await fsp.readFile(DB_FILE))
 const app = express()
 
 // static files (HTML, CSS)
-app.use(express.static('public'))
+app.use('/idp/profile/SAML2/Redirect/SSO', express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
 // handle login
